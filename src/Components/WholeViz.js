@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as d3 from "d3";
 import _ from "lodash";
-//import dataLoad from "../data/mal_scrape_Jan8.json";
+import dataLoad from "../data/mal_scrape_Jan8_limited.json";
 import HeroSection from "./HeroSection";
 import AnimeTimeline from "./AnimeTimeline";
 import AnimeGraph from "./AnimeGraph";
@@ -17,7 +17,7 @@ const WholeViz = () => {
   const [studios, setStudios] = useState(null);
 
   /// Data load ///
-  /*
+
   useEffect(() => {
     
     // transform data into just {year: 2020, number_anime: 800}
@@ -58,13 +58,12 @@ const WholeViz = () => {
     setAllData(dataLoad)
 
   }, []);
-  */
+
 
   return (
     <div id="whole-graph-petalscircles">
       <HeroSection />
 
-      {/* 
       <div className="whole-graph-petalscircles-container">
         <AnimeTimeline
           data={data}
@@ -79,7 +78,7 @@ const WholeViz = () => {
           studios={studios}
         />
       </div>
-      */}
+
       <Footer/>
     </div>
   )
