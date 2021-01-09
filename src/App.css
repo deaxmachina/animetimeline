@@ -253,3 +253,9 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .whole-graph-petalscircles-footer {
+    height: 100vh;
+  }
+}
+
