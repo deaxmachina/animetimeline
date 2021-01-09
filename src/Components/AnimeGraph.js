@@ -38,7 +38,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
   const width = 1300;
   const height = 800;
   const legendHeight = 60;
-  const margin = {top: 50, bottom: legendHeight + 20, right: 30, left: 120}
+  const margin = {top: 20, bottom: legendHeight + 20, right: 30, left: 120}
   
   // for the lower and upper limit of the popularity scale
   const minPopularity = 7
@@ -90,7 +90,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
         .padding(0.1)
       // Y Scale - corresponds to the score of anime 
       const yScale = d3.scaleLinear()
-        .domain([d3.min(allData, d => d.score) + 2, d3.max(allData, d => d.score) + 0.5])
+        .domain([d3.min(allData, d => d.score) + 1.5, d3.max(allData, d => d.score) + 1])
         .range([height - margin.bottom, margin.top])
       // Popularity scale - number of members who have seen the anime 
       const popularityScale = d3.scaleSqrt()
@@ -274,7 +274,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
           .style("text-anchor", "end")
           .attr("dy", ".35em")
           .attr("dx", ".35em")
-          .attr("transform", "rotate(-40)")
+          .attr("transform", "rotate(-30)")
         )
         .call(g => g.selectAll(".tick")
           .style("color", shapeBackgroundColour)
