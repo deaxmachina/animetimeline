@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div id="whole-graph-petalscircles-hero">
       <h1 className="whole-graph-petalscircles-title">A Timeline of Anime</h1>
       <div className="whole-graph-petalscircles-subtitle">
-        Explore the evolution of anime over the decades using anime data from one of the most popular anime fan websites <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a>
+        Explore the evolution of anime over the decades with data from one of the most popular anime fan websites <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a>
       </div>
 
       <div className="whole-graph-petalscircles-instructions">
@@ -21,7 +21,7 @@ const HeroSection = () => {
         </ul>
       </div>  
       <p className="whole-graph-petalscircles-disclaimer">
-        * Best viewed on a laptop/desktop screen. Some of the interactivity won't work on a mobile device.
+        * Best viewed on a laptop/desktop screen.
       </p>
     </div>
 
