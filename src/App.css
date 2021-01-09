@@ -77,6 +77,7 @@ body {
   font-size: 12px;
   list-style-position: inside;
 }
+
 .whole-graph-petalscircles-instructions-list li::marker {
   content: "\29BF";
   color: var(--pink-colour);
@@ -256,6 +257,8 @@ body {
 @media (max-width: 600px) {
   .whole-graph-petalscircles-footer {
     height: 100vh;
+    font-size: 12px;
+    padding: 0 40px;
   }
 }
 
