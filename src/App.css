@@ -69,7 +69,7 @@ body {
 }
 .whole-graph-petalscircles-instructions-title {
   padding: 0;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
 }
 .whole-graph-petalscircles-instructions-list {
   margin: auto;
@@ -80,7 +80,7 @@ body {
 .whole-graph-petalscircles-instructions-list li::marker {
   content: "\29BF";
   color: var(--pink-colour);
-  font-size: 15px;
+  font-size: 12px;
 }
 .whole-graph-petalscircles-instructions-list li > span {
   margin-left: 7px;
@@ -166,10 +166,12 @@ body {
   bottom: 195px;
   width: 65px;
   height: 65px;
+  opacity: 0.85;
 }
 .reset-button:hover {
   background: var(--dark-background);
   box-shadow: 3px 3px 1px 1px #970C3F ;
+  opacity: 0.85;
 }
 
 
@@ -185,7 +187,7 @@ body {
   background-color: var(--creme-white);
   margin-top: 70px;
   color: var(--dark-background);
-  padding: 30px 20px;
+  padding: 25px 20px;
   box-sizing: border-box;
   font-size: 9px;
   width: 100%;

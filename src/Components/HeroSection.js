@@ -16,7 +16,7 @@ const HeroSection = () => {
           <li><span>Each circle in the graph below the timeline = one anime.</span></li>
           <li><span>Sorted vertically by score (rating). Higher = greater score.</span></li>
           <li><span>The bigger the anime circle, the more members have seen the anime.</span></li>  
-          <li><span>Number of constituent circles in each anime circle = number of genres. Each genre is coloured according to the legend below.</span></li>    
+          <li><span>Number of constituent circles in each anime circle = number of genres. Genres are coloured as per the legend below.</span></li>    
           <li><span>General tip: Play around, explore! Most elements can be clicked/and or hovered to reveal more information or filter.</span></li>
         </ul>
       </div>  
