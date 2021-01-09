@@ -96,7 +96,7 @@ const WholeViz = () => {
               setAllData={setAllData}
               studios={studios}
               width={1300}
-              height={840}
+              height={800}
               minPopularity={7}
               maxPopularity={37}
             />
