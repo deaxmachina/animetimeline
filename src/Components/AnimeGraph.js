@@ -41,8 +41,8 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
   const margin = {top: 50, bottom: legendHeight + 20, right: 30, left: 120}
   
   // for the lower and upper limit of the popularity scale
-  const minPopularity = 5
-  const maxPopularity = 45
+  const minPopularity = 7
+  const maxPopularity = 47
   // scale of the petals 
   const petalScale = 0.008 * 2;
   // colours 
