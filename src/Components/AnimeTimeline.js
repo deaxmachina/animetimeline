@@ -19,7 +19,7 @@ const AnimeTimeline = ({
   const width = 1300;
   const heightRect = 100;
   const height = 100;
-  const margin = {top: 30, bottom: 45, right: 20, left: 20}
+  const margin = {top: 30, bottom: 45, right: 10, left: 10}
   // radius of the timeline circles 
   const minRadiusTimeline = 8;
   const maxRadiusTimeline = 18;

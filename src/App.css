@@ -107,7 +107,7 @@ body {
 }
 
 .whole-graph-petalscircles-selected-year {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-size: 30px;
   font-family: 'Dancing Script', cursive;
@@ -165,8 +165,8 @@ body {
   cursor: default;
   right: 10%;
   bottom: 166px;
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   opacity: 0.85;
 }
 .reset-button:hover {
