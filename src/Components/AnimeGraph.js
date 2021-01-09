@@ -36,7 +36,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
   /// constatns ///
   // dimensions 
   const width = 1300;
-  const height = 850;
+  const height = 550;
   const legendHeight = 60;
   const margin = {top: 50, bottom: legendHeight + 20, right: 30, left: 120}
   
