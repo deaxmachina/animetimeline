@@ -12,7 +12,7 @@ const Footer = () => {
           The colouring of the genres is based on a completely subjective ordering of "seriousness", aiming to give a visual representation of what kind of anime are most popular. 
         </li>
         <li>
-          "Popular but low score anime" are defined as anime with number of members who have seen it in the 75th percentile, but with mean scorre below 6.5/10.
+          "Popular but low score anime" are defined as anime with number of members who have seen it in the 75th percentile, but with mean score below 6.5/10.
         </li>
       </ul>
       <p className="whole-graph-petalscircles-p">
