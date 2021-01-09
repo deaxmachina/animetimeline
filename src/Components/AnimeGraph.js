@@ -422,7 +422,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
         tooltip 
           .style('transform', d => `translate(
               ${datum.x}px,
-              ${datum.y}px`
+              ${datum.y + 80}px`
             ) 
           .style("opacity", 1)
         // set the selected anime to the one corresponing to the hovered element 
