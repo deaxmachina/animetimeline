@@ -36,7 +36,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
   /// constatns ///
   // dimensions 
   const width = 1300;
-  const height = 900;
+  const height = 800;
   const legendHeight = 60;
   const margin = {top: 50, bottom: legendHeight + 20, right: 30, left: 120}
   
@@ -90,7 +90,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
         .padding(0.1)
       // Y Scale - corresponds to the score of anime 
       const yScale = d3.scaleLinear()
-        .domain([d3.min(allData, d => d.score) + 1.5, d3.max(allData, d => d.score) + 1])
+        .domain([d3.min(allData, d => d.score) + 2, d3.max(allData, d => d.score) + 1])
         .range([height - margin.bottom, margin.top])
       // Popularity scale - number of members who have seen the anime 
       const popularityScale = d3.scaleSqrt()
