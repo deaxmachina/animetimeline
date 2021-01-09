@@ -164,9 +164,9 @@ body {
   outline: none;
   cursor: default;
   right: 10%;
-  bottom: 195px;
-  width: 65px;
-  height: 65px;
+  bottom: 166px;
+  width: 60px;
+  height: 60px;
   opacity: 0.85;
 }
 .reset-button:hover {

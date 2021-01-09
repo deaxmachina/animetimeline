@@ -18,6 +18,16 @@ const WholeViz = () => {
   const [selectedYear, setSelectedYear] = useState(2020)
   const [studios, setStudios] = useState(null);
 
+  // to have animated div only on bigger screen size 
+  const [isDesktop, setIsDesktop] = useState(true)
+  const updatePredicate = function () {
+    setIsDesktop(window.innerWidth > 1500)
+  }
+  useEffect(() => {
+    updatePredicate();
+    window.addEventListener("resize", updatePredicate);
+  }, [])
+
   /// Data load ///
 
   useEffect(() => {
@@ -77,12 +87,32 @@ const WholeViz = () => {
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
         />
-        <AnimeGraph
-          allData={allData}
-          selectedYear={selectedYear}
-          setAllData={setAllData}
-          studios={studios}
-        />
+        {
+          isDesktop
+          ?
+            <AnimeGraph
+              allData={allData}
+              selectedYear={selectedYear}
+              setAllData={setAllData}
+              studios={studios}
+              width={1300}
+              height={860}
+              minPopularity={7}
+              maxPopularity={37}
+            />
+          :
+            <AnimeGraph
+              allData={allData}
+              selectedYear={selectedYear}
+              setAllData={setAllData}
+              studios={studios}
+              width={1300}
+              height={560}
+              minPopularity={4}
+              maxPopularity={33}
+            />
+        }
+
       </div>
 
       <Footer/>

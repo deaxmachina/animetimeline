@@ -18,7 +18,9 @@ const petalPaths = [
 ]
 
 
-const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
+const AnimeGraph = ({ 
+  allData, selectedYear, setAllData, width, height, minPopularity, maxPopularity
+}) => {
 
   const [selectedAnime, setSelectedAnime] = useState(null)
 
@@ -35,14 +37,12 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
 
   /// constatns ///
   // dimensions 
-  const width = 1300;
-  const height = 800;
   const legendHeight = 60;
   const margin = {top: 20, bottom: legendHeight + 20, right: 30, left: 120}
   
   // for the lower and upper limit of the popularity scale
-  const minPopularity = 7
-  const maxPopularity = 47
+  //const minPopularity = 7
+  //const maxPopularity = 47
   // scale of the petals 
   const petalScale = 0.008 * 2;
   // colours 
@@ -348,7 +348,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
           .data([0])
           .join("g")
           .classed(".all-genres-button-g", true)
-          .attr("transform", `translate(${width - margin.right}, ${-80})`)
+          .attr("transform", `translate(${width - margin.right}, ${-65})`)
           .on("click", function(e, datum) {
             shapes.attr("opacity", 1)
             legendSelectedGenreText.text("all genres")
