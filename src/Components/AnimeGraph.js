@@ -90,7 +90,7 @@ const AnimeGraph = ({ allData, selectedYear, setAllData}) => {
         .padding(0.1)
       // Y Scale - corresponds to the score of anime 
       const yScale = d3.scaleLinear()
-        .domain([d3.min(allData, d => d.score) + 2, d3.max(allData, d => d.score) + 1])
+        .domain([d3.min(allData, d => d.score) + 2, d3.max(allData, d => d.score) + 0.5])
         .range([height - margin.bottom, margin.top])
       // Popularity scale - number of members who have seen the anime 
       const popularityScale = d3.scaleSqrt()
