@@ -34,6 +34,7 @@ const AnimeGraph = ({
   const legendRectsAxisRef = useRef();
   const tooltipRef = useRef();
   const resetButtonRef = useRef();
+  const underratedButtonRef = useRef();
 
   /// constatns ///
   // dimensions 
@@ -124,21 +125,25 @@ const AnimeGraph = ({
         .attr("transform", `translate(${margin.left}, ${0})`)
         .call(d3.axisLeft(yScale).ticks(3))
         .call(g => g.select(".domain").remove())
-        .call(g => g.select(".tick:last-of-type text").clone()
-          .attr("x", -height/2 + margin.top)
-          .attr("y", -margin.left / 2)
-          .attr("text-anchor", "start")
-          .attr("dy", "0.35em")
-          .attr("font-size", "12px")
-          .attr("fill-opacity", 1)
-          .attr("opacity", 1)
-          .attr("transform", `rotate(${-90})`)
-          .text("average user score of anime")
-        )
 
       /// Graph ///
       const svg = d3.select(gRef.current)
         .attr("transform", `translate(${margin.left}, ${0})`)
+
+      // text on the side of the y axis 
+      const yAxisSideText = svg.selectAll(".y-axis-side-text").data(["average user score of anime"]).join("text")
+        .classed("y-axis-side-text", true)
+          .attr("x", -height/2 + margin.top)
+          .attr("y", -margin.left / 2)
+          .attr("text-anchor", "start")
+          .attr("dy", "0.35em")
+          .attr("font-size", "14px")
+          .attr("fill-opacity", 1)
+          .attr("opacity", 1)
+          .attr("fill", 'white')
+          .attr("transform", `rotate(${-90})`)
+          .text(d => d)
+
 
       // Force Simulation - to make the shapes not collide with each other
       // note that we first remove the anime without a score as we don't want to visualise these 
@@ -300,7 +305,7 @@ const AnimeGraph = ({
         .join("text")
         .classed("legend-selected-genre-text-front", true)
           .attr("transform", `translate(${margin.left + 15}, ${-50})`)
-          .text("selected genre")
+          .text("currently selected genre")
           .attr("fill", lightColour)
           .style("text-anchor", "start")
           .attr("font-size", "0.95em")
@@ -343,6 +348,28 @@ const AnimeGraph = ({
       ///////////////////////////////////////
 
       // button for popular but low score
+
+      const underratedButton = d3.select(underratedButtonRef.current)
+        .on("click", function(e, datum) {
+          shapes.attr("opacity", 1)
+          legendSelectedGenreText.text("all genres")
+        })
+        .on("click", function() {
+          const overratedAnime = _.filter(allData, function(anime){ 
+            return (anime.members >= highQuantileMembers && anime.score <= overratedScore)
+          })
+          shapes.attr("opacity", d => overratedAnime.includes(d) ? 1 : 0.1)
+        })
+        .on("mouseenter", function() {
+          underratedButton
+            .attr("stroke-width", 3)
+        })
+        .on("mouseleave", function() {
+          underratedButton
+            .attr("stroke-width", 1)
+        })
+
+      /*
       const underratedButtonG = legend
           .selectAll(".all-genres-button-g")
           .data([0])
@@ -384,19 +411,21 @@ const AnimeGraph = ({
       // text on the button
       const underratedButtonText = underratedButtonG
           .selectAll(".legend-select-all-genres-text")
-          .data([0])
+          .data(["popular but low score"])
           .join("text")
           .classed("legend-select-all-genres-text", true)
             .attr("transform", `translate(${-90}, ${13})`)
             .attr("fill", lightColour)
-            .text("popular but low score")
+            .text(d => d)
             .style("text-anchor", "start")
-            .attr("font-size", "0.77em")
+            .attr("font-size", "14px")
             .style("font-variant", "small-caps")
             .attr("font-family", "sans-serif")
             .attr("dy", "0.33em")
+            .attr("dx", "-0.35em")
             .attr('cursor', 'default')
             .attr('pointer-events', 'none')
+      */
 
       // button for reset 
       const resetButton = d3.select(resetButtonRef.current)
@@ -459,6 +488,7 @@ const AnimeGraph = ({
         </svg>
 
         <button ref={resetButtonRef} className="reset-button">reset</button>
+        <button ref={underratedButtonRef} className="underrated-button">popular but low score</button>
 
         <div id="tooltip" className="tooltip" ref={tooltipRef}>
           {selectedAnime 
