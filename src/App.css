@@ -70,18 +70,20 @@ body {
 .whole-graph-petalscircles-instructions-title {
   padding: 0;
   margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: bold;
 }
 .whole-graph-petalscircles-instructions-list {
   margin: auto;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   list-style-position: inside;
 }
 
 .whole-graph-petalscircles-instructions-list li::marker {
   content: "\29BF";
   color: var(--pink-colour);
-  font-size: 12px;
+  font-size: 14px;
 }
 .whole-graph-petalscircles-instructions-list li > span {
   margin-left: 7px;
@@ -303,6 +305,9 @@ body {
   }
   .underrated-button {
     bottom: -35px;
+  }
+  .whole-graph-petalscircles-instructions-list li > span {
+    margin-left: 2px;
   }
 }
 
