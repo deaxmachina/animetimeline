@@ -169,12 +169,6 @@ body {
   height: 62px;
   opacity: 0.85;
 }
-.reset-button:hover, .underrated-button:hover {
-  background: var(--dark-background);
-  box-shadow: 3px 3px 1px 1px #970C3F ;
-  opacity: 0.85;
-}
-
 .underrated-button {
   position: absolute;
   bottom: 130px;
@@ -189,6 +183,11 @@ body {
   font-size: 12px;
   padding: 8px;
   box-sizing: border-box;
+}
+.reset-button:hover, .underrated-button:hover {
+  background: var(--dark-background);
+  box-shadow: 3px 3px 1px 1px #970C3F ;
+  opacity: 0.85;
 }
 
 
@@ -247,11 +246,20 @@ body {
   .whole-graph-petalscircles-instructions-list {
     margin-left: 200px;
   }
+  .reset-button, .underrated-button {
+    right: 20%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .reset-button, .underrated-button {
+    right: 15%;
+  }
 }
 
 @media (min-width: 1500px) {
-  .reset-button {
-    right: 20%;
+  .reset-button, .underrated-button {
+    right: 11%;
   }
 }
 
@@ -284,6 +292,12 @@ body {
     /*height: 100vh;*/
     font-size: 12px;
     padding: 20px 40px;
+  }
+  .reset-button {
+    bottom: 150px;
+  }
+  .underrated-button {
+    bottom: -35px;
   }
 }
 
