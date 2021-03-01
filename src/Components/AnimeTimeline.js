@@ -21,7 +21,7 @@ const AnimeTimeline = ({
   const height = 100;
   const margin = {top: 30, bottom: 45, right: 10, left: 10}
   // radius of the timeline circles 
-  const minRadiusTimeline = 8;
+  const minRadiusTimeline = 12;
   const maxRadiusTimeline = 18;
   // colours 
   const shapeBackgroundColour = "#010B14" //  "#14213d" 
