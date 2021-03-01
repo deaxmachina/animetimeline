@@ -209,7 +209,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   background-color: var(--creme-white);
   margin-top: 70px;
   color: var(--dark-background);
@@ -218,6 +217,10 @@ body {
   font-size: 12px;
   width: 100%;
 }
+.whole-graph-petalscircles-footer p {
+  text-align: left;
+}
+
 .whole-graph-petalscircles-methodology {
   font-weight: bold;
 }

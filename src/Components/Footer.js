@@ -25,9 +25,8 @@ const Footer = () => {
         <a href="https://frontendmasters.com/courses/d3/" target="_blank"> course</a>.
       </p>
       <p className="whole-graph-petalscircles-p">made by  
-        <span> Dea Bankova </span>
+        <span> Dea Bankova </span>©2021
       </p>
-      <p>©2021</p>
     </div>
   )
 };
