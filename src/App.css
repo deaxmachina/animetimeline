@@ -233,7 +233,12 @@ body {
 /***************** Individual Graph Wrappers **************************/
 /**********************************************************************/
 
-#anime-timeline-wrapper, #anime-graph-wrapper {
+#anime-graph-wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+#anime-timeline-wrapper {
   width: 100%;
   overflow: auto;
 }

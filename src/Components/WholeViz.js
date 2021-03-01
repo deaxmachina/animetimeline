@@ -20,8 +20,10 @@ const WholeViz = () => {
 
   // to have animated div only on bigger screen size 
   const [isDesktop, setIsDesktop] = useState(true)
+  const [desktopSize, setDesktopSize] = useState(null);
   const updatePredicate = function () {
     setIsDesktop(window.innerWidth > 1500)
+    setDesktopSize(window.innerWidth)
   }
   useEffect(() => {
     updatePredicate();
@@ -91,6 +93,7 @@ const WholeViz = () => {
           isDesktop
           ?
             <AnimeGraph
+              desktopSize={desktopSize}
               allData={allData}
               selectedYear={selectedYear}
               setAllData={setAllData}
@@ -102,6 +105,7 @@ const WholeViz = () => {
             />
           :
             <AnimeGraph
+              desktopSize={desktopSize}
               allData={allData}
               selectedYear={selectedYear}
               setAllData={setAllData}

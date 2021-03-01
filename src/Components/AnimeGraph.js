@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 import _ from "lodash";
 import { orderedGenres, colourScaleOrderedGenres, hentaiGenres } from "./genres.js"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faRadiation } from '@fortawesome/free-solid-svg-icons'
 
 
 // options for the petal paths //
@@ -19,7 +21,7 @@ const petalPaths = [
 
 
 const AnimeGraph = ({ 
-  allData, selectedYear, setAllData, width, height, minPopularity, maxPopularity
+  allData, selectedYear, setAllData, width, height, minPopularity, maxPopularity, desktopSize
 }) => {
 
   const [selectedAnime, setSelectedAnime] = useState(null)
@@ -39,7 +41,7 @@ const AnimeGraph = ({
   /// constatns ///
   // dimensions 
   const legendHeight = 60;
-  const margin = {top: 20, bottom: legendHeight + 20, right: 30, left: 120}
+  const margin = {top: 20, bottom: legendHeight + 20, right: 30, left: 70}
   
   // for the lower and upper limit of the popularity scale
   //const minPopularity = 7
@@ -369,63 +371,6 @@ const AnimeGraph = ({
             .attr("stroke-width", 1)
         })
 
-      /*
-      const underratedButtonG = legend
-          .selectAll(".all-genres-button-g")
-          .data([0])
-          .join("g")
-          .classed(".all-genres-button-g", true)
-          .attr("transform", `translate(${width - margin.right}, ${-65})`)
-          .on("click", function(e, datum) {
-            shapes.attr("opacity", 1)
-            legendSelectedGenreText.text("all genres")
-          })
-          .on("click", function() {
-            const overratedAnime = _.filter(allData, function(anime){ 
-              return (anime.members >= highQuantileMembers && anime.score <= overratedScore)
-            })
-            shapes.attr("opacity", d => overratedAnime.includes(d) ? 1 : 0.1)
-          })
-          .on("mouseenter", function() {
-            underratedButtonRect
-              .attr("stroke-width", 3)
-          })
-          .on("mouseleave", function() {
-            underratedButtonRect
-              .attr("stroke-width", 1)
-          })
-        
-      // rect for the button
-      const underratedButtonRect = underratedButtonG
-          .selectAll(".legend-select-all-genres")
-          .data([0])
-          .join("rect")
-          .classed("legend-select-all-genres", true)
-            .attr("transform", `translate(${-109}, ${0})`)
-            .attr("fill", shapeBackgroundColour)
-            .attr("width", 160)
-            .attr("height", 28)
-            .attr("stroke", lightColour)
-            .attr("stroke-width", 1)
-
-      // text on the button
-      const underratedButtonText = underratedButtonG
-          .selectAll(".legend-select-all-genres-text")
-          .data(["popular but low score"])
-          .join("text")
-          .classed("legend-select-all-genres-text", true)
-            .attr("transform", `translate(${-90}, ${13})`)
-            .attr("fill", lightColour)
-            .text(d => d)
-            .style("text-anchor", "start")
-            .attr("font-size", "14px")
-            .style("font-variant", "small-caps")
-            .attr("font-family", "sans-serif")
-            .attr("dy", "0.33em")
-            .attr("dx", "-0.35em")
-            .attr('cursor', 'default')
-            .attr('pointer-events', 'none')
-      */
 
       // button for reset 
       const resetButton = d3.select(resetButtonRef.current)
@@ -464,15 +409,21 @@ const AnimeGraph = ({
         tooltip.style("opacity", 0)
       })
 
-    } else {
-      console.log("Missing data")
-    }
+    } 
   }, [allData, selectedYear, width, height]);
 
 
   return (
       <div>
         <h1 className="whole-graph-petalscircles-selected-year">{selectedYear}</h1>
+        {
+            desktopSize > 1100
+              ? <div></div>
+              : <div>
+                  <span>scroll </span>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+          }
         <div id="anime-graph-wrapper">
           <svg 
             ref={svgRef} 
@@ -487,6 +438,9 @@ const AnimeGraph = ({
             <g ref={legendRef}></g>
             <g ref={legendRectsAxisRef}></g>
           </svg>
+
+
+
         </div>
 
         <button ref={resetButtonRef} className="reset-button">reset</button>
