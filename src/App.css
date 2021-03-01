@@ -44,14 +44,14 @@ body {
   padding-top: 10%;
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
-  font-size: 55px;
+  font-size: 56px;
 }
 .whole-graph-petalscircles-subtitle {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Dancing Script', cursive;
-  font-size: 22px;
+  font-size: 28px;
 }
 .whole-graph-petalscircles-subtitle a:link {
   color: var(--pink-colour);
@@ -92,7 +92,7 @@ body {
   margin-left: 7px;
 }
 .whole-graph-petalscircles-disclaimer {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 
@@ -114,7 +114,7 @@ body {
 .whole-graph-petalscircles-selected-year {
   padding: 10px;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   font-family: 'Dancing Script', cursive;
 }
 
@@ -144,7 +144,7 @@ body {
 }
 .tooltip-info {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* For the font of the season label */
@@ -195,6 +195,11 @@ body {
   opacity: 0.85;
 }
 
+.timeline-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 
 /**********************************************************************/
 /***************************** Footer *********************************/
@@ -210,7 +215,7 @@ body {
   color: var(--dark-background);
   padding: 25px 20px;
   box-sizing: border-box;
-  font-size: 9px;
+  font-size: 12px;
   width: 100%;
 }
 .whole-graph-petalscircles-methodology {
@@ -280,17 +285,11 @@ body {
   .whole-graph-petalscircles-instructions {
     font-size: 14px;
   }
-  .whole-graph-petalscircles-instructions {
-    font-size: 13px;
-  }
 }
 
 @media (max-width: 700px) {
   #whole-graph-petalscircles-hero {
     width: 80%;
-  }
-  .whole-graph-petalscircles-instructions {
-    font-size: 15px;
   }
   .whole-graph-petalscircles-instructions {
     font-size: 14px;
@@ -299,8 +298,6 @@ body {
 
 @media (max-width: 600px) {
   .whole-graph-petalscircles-footer {
-    /*height: 100vh;*/
-    font-size: 12px;
     padding: 20px 40px;
   }
   .reset-button {

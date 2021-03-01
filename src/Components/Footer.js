@@ -27,7 +27,7 @@ const Footer = () => {
       <p className="whole-graph-petalscircles-p">made by  
         <span> Dea Bankova </span>
       </p>
-      <p>2021</p>
+      <p>©2021</p>
     </div>
   )
 };

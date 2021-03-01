@@ -163,7 +163,7 @@ const AnimeTimeline = ({
 
   return (
     <div>
-      <p>timeline - number of anime per year</p>
+      <p className="timeline-title">timeline - number of anime per year</p>
       <br />
       <div id="anime-timeline-wrapper">
         <svg ref={svgRef} width={width} height={height}>
