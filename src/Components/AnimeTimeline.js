@@ -162,14 +162,16 @@ const AnimeTimeline = ({
 
 
   return (
-    <>
+    <div>
       <p>timeline - number of anime per year</p>
-      <svg ref={svgRef} width={width} height={height}>
-        <g ref={rectRef}></g>
-        <g ref={gRef}></g>
-        <g ref={xAxisRef}></g>
-      </svg>
-    </>
+      <div id="anime-timeline-wrapper">
+        <svg ref={svgRef} width={width} height={height}>
+          <g ref={rectRef}></g>
+          <g ref={gRef}></g>
+          <g ref={xAxisRef}></g>
+        </svg>
+      </div>
+    </div>
   )
 }
 

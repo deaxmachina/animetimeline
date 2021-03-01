@@ -79,7 +79,6 @@ const WholeViz = () => {
   return (
     <div id="whole-graph-petalscircles">
       <HeroSection />
-
       <div className="whole-graph-petalscircles-container">
         <AnimeTimeline
           data={data}
@@ -87,6 +86,7 @@ const WholeViz = () => {
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
         />
+
         {
           isDesktop
           ?
@@ -114,8 +114,7 @@ const WholeViz = () => {
         }
 
       </div>
-
-      <Footer/>
+      <Footer />
     </div>
   )
 };

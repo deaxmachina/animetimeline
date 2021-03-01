@@ -471,21 +471,23 @@ const AnimeGraph = ({
 
 
   return (
-      <>
+      <div>
         <h1 className="whole-graph-petalscircles-selected-year">{selectedYear}</h1>
-        <svg 
-          ref={svgRef} 
-          width={width + margin.left + margin.right} 
-          height={height + margin.top + margin.bottom}
-        >
-          <g ref={gRef}>
-            <g ref={nodesRef}></g>
-          </g>
-          <g ref={xAxisRef}></g>
-          <g ref={yAxisRef}></g>
-          <g ref={legendRef}></g>
-          <g ref={legendRectsAxisRef}></g>
-        </svg>
+        <div id="anime-graph-wrapper">
+          <svg 
+            ref={svgRef} 
+            width={width + margin.left + margin.right} 
+            height={height + margin.top + margin.bottom}
+          >
+            <g ref={gRef}>
+              <g ref={nodesRef}></g>
+            </g>
+            <g ref={xAxisRef}></g>
+            <g ref={yAxisRef}></g>
+            <g ref={legendRef}></g>
+            <g ref={legendRectsAxisRef}></g>
+          </svg>
+        </div>
 
         <button ref={resetButtonRef} className="reset-button">reset</button>
         <button ref={underratedButtonRef} className="underrated-button">popular but low score</button>
@@ -499,7 +501,7 @@ const AnimeGraph = ({
             </div> 
           : null}
         </div>
-      </>
+      </div>
   )
 };
 
