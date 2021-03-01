@@ -5,3 +5,5 @@
 - React app; Visualisation in D3.js
 ## Website
 https://animetimeline.netlify.app/
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/192110190@N06/50991770033/in/dateposted-public/" title="animetimeline"><img src="https://live.staticflickr.com/65535/50991770033_56c1f45f93_b.jpg" width="500" alt="animetimeline"></a>
