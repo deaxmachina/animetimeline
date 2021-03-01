@@ -467,7 +467,7 @@ const AnimeGraph = ({
     } else {
       console.log("Missing data")
     }
-  }, [allData, selectedYear]);
+  }, [allData, selectedYear, width, height]);
 
 
   return (
