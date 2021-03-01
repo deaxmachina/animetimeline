@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="whole-graph-petalscircles-instructions">
         <p className="whole-graph-petalscircles-instructions-title">How to read & interact with this visualisation</p>
         <ul className="whole-graph-petalscircles-instructions-list">
-          <li><span>Each circle in the graph below the timeline = one anime.</span></li>
+          <li>Each circle in the graph below the timeline = one anime.</li>
           <li><span>Sorted vertically by score (rating). Higher = greater score.</span></li>
           <li><span>The bigger the anime circle, the more members have seen the anime.</span></li>  
           <li><span>Number of constituent circles in each anime circle = number of genres.</span></li>    

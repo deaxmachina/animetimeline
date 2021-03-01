@@ -395,7 +395,7 @@ const AnimeGraph = ({
           .attr("fill", d => d == datum ? lightColour : circleOutlineHoverColour)
         tooltip 
           .style('transform', d => `translate(
-              ${datum.x}px,
+              ${desktopSize > 800 ? datum.x : 100}px,
               ${datum.y + 80}px`
             ) 
           .style("opacity", 1)
@@ -410,7 +410,7 @@ const AnimeGraph = ({
       })
 
     } 
-  }, [allData, selectedYear, width, height]);
+  }, [allData, selectedYear, width, height, desktopSize]);
 
 
   return (

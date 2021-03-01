@@ -78,7 +78,7 @@ const AnimeTimeline = ({
         .data(["click on a circle to filter anime by year"])
         .join("text")
         .classed("instructions-text", true)
-        .attr("transform", `translate(${margin.left + 5}, ${margin.top/2 - 5})`)
+        .attr("transform", `translate(${margin.left + 5}, ${margin.top/2 - 10})`)
         .text(d => d)
         .attr("font-size", "12px")
         .attr("fill", "white")
