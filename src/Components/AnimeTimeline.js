@@ -19,7 +19,7 @@ const AnimeTimeline = ({
   const width = 1300;
   const heightRect = 100;
   const height = 100;
-  const margin = {top: 30, bottom: 45, right: 10, left: 10}
+  const margin = {top: 35, bottom: 45, right: 10, left: 10}
   // radius of the timeline circles 
   const minRadiusTimeline = 12;
   const maxRadiusTimeline = 18;
@@ -78,9 +78,9 @@ const AnimeTimeline = ({
         .data(["click on a circle to filter anime by year"])
         .join("text")
         .classed("instructions-text", true)
-        .attr("transform", `translate(${margin.left + 5}, ${margin.top/2 - 10})`)
+        .attr("transform", `translate(${margin.left + 5}, ${margin.top/2 - 12})`)
         .text(d => d)
-        .attr("font-size", "12px")
+        .attr("font-size", "14px")
         .attr("fill", "white")
         .attr("dy", "0.35em")
 

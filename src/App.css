@@ -168,16 +168,16 @@ body {
   text-transform: uppercase;
   outline: none;
   cursor: default;
-  right: 8%;
-  bottom: 180px;
+  right: 7%;
+  bottom: 160px;
   width: 62px;
   height: 62px;
   opacity: 0.85;
 }
 .underrated-button {
   position: absolute;
-  bottom: 130px;
-  right: 8%;
+  bottom: 105px;
+  right: 7%;
   width: 185px;
   height: 35px;
   outline: none;
@@ -304,10 +304,14 @@ body {
     padding: 20px 40px;
   }
   .reset-button {
-    bottom: 150px;
+    bottom: 170px;
+    left: 90px;
+    right: 0px;
   }
   .underrated-button {
     bottom: -35px;
+    left: 90px;
+    right: 0px;
   }
   .whole-graph-petalscircles-instructions-list li > span {
     margin-left: 0px;

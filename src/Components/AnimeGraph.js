@@ -307,12 +307,13 @@ const AnimeGraph = ({
         .join("text")
         .classed("legend-selected-genre-text-front", true)
           .attr("transform", `translate(${margin.left + 15}, ${-50})`)
-          .text("currently selected genre")
+          .text("click on a square to filter by genre")
           .attr("fill", lightColour)
           .style("text-anchor", "start")
-          .attr("font-size", "0.95em")
+          .attr("font-size", "14px")
 
       // text with instructions to select genre 
+      /*
       const legendSelectedGenreTextInstructions = legend
         .selectAll(".legend-selected-genre-text-instructions")
         .data([0])
@@ -324,6 +325,7 @@ const AnimeGraph = ({
           .style("text-anchor", "end")
           .attr("font-size", "0.85em")
           .attr("dy", "0.35em")
+      */
 
       /// Legend interactions ///
       legendRects.on("click", function(event, datum) {
