@@ -44,7 +44,10 @@ body {
   padding-top: 10%;
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
-  font-size: 56px;
+  font-size: 70px;
+}
+.whole-graph-petalscircles-title span {
+  padding: 0px 15px;
 }
 .whole-graph-petalscircles-subtitle {
   margin: auto;
@@ -70,26 +73,32 @@ body {
 .whole-graph-petalscircles-instructions-title {
   padding: 0;
   margin-bottom: 3px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 .whole-graph-petalscircles-instructions-list {
   margin: auto;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   list-style-position: inside;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--pink-colour);
+  padding-left: 10px;
+  max-width: 580px;
 }
 
 .whole-graph-petalscircles-instructions-list li::marker {
-  content: "\29BF";
+  /* content: "\29BF"; */
+  content: none;
   color: var(--pink-colour);
   font-size: 14px;
 }
 .whole-graph-petalscircles-instructions-list li > span {
-  margin-left: 7px;
+  margin-left: 0px;
 }
 .whole-graph-petalscircles-instructions-list li {
   margin-left: 7px;
+  margin-bottom: 5px;
 }
 .whole-graph-petalscircles-disclaimer {
   font-size: 12px;

@@ -5,13 +5,13 @@ import _ from "lodash";
 const HeroSection = () => {
   return (
     <div id="whole-graph-petalscircles-hero">
-      <h1 className="whole-graph-petalscircles-title">A Timeline of Anime</h1>
+      <h1 className="whole-graph-petalscircles-title"><span>A Timeline of Anime</span></h1>
       <div className="whole-graph-petalscircles-subtitle">
         Explore the evolution of anime over the decades according to <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a>
       </div>
 
       <div className="whole-graph-petalscircles-instructions">
-        <p className="whole-graph-petalscircles-instructions-title">How to read & interact with this visualisation</p>
+        {/* <p className="whole-graph-petalscircles-instructions-title">How to read & interact with this visualisation</p> */}
         <ul className="whole-graph-petalscircles-instructions-list">
           <li><span>Each circle in the graph below the timeline = one anime.</span></li>
           <li><span>Sorted vertically by score (rating). Higher = greater score.</span></li>
